@@ -1,0 +1,26 @@
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: #212121;
+}
+/* first we will design our card */
+.card {
+  width: 200px;
+  height: 260px;
+  background-color: #212121;
+  box-shadow: 15px 15px 30px #191919, -15px -15px 30px #292929;
+  transition: 0.3s;
+  cursor: pointer;
+}
+/* then when hovered we will add some radius to some corners 
+like bottom right and top left 
+and scale will rise*/
+.card:hover {
+  border-bottom-right-radius: 50px;
+  border-top-left-radius: 50px;
+  transform: scale(1.05);
+}

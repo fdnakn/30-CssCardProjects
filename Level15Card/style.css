@@ -1,0 +1,57 @@
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: #e8e8e8;
+}
+.card {
+  height: 254px;
+  width: 190px;
+  position: relative;
+  transition: .4s;
+  border-radius: 16px;
+  box-shadow: 0 0 20px 8px #d0d0d0;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+/*now we will style the div , you can put here a image*/
+.card-image {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  transition: .3s;
+  background: #00adb5;
+}
+
+/*now lets style the description*/
+.card-description {
+  position: absolute;
+  background-color: #f5f5f5;
+  height: 70%;
+  bottom: 0;
+  /* it will be at the bottom not top */
+  border-radius: 16px 16px 75px 0;
+  transition: 1.5s;
+  padding: 16px
+}
+
+/*now lets style the text*/
+.text-title {
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.text-body {
+  font-size: 1em;
+  line-height: 150%;
+}
+
+/* and when hovered the card description will decrease*/
+
+.card:hover .card-description {
+  transform: translateY(100%);
+}

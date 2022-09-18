@@ -1,0 +1,28 @@
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: #E8E8E8;
+}
+.card {
+  width: 190px;
+  height: 254px;
+  border-radius: 20px;
+  padding: 5px;
+  /* we are giving padding */
+  box-shadow:  0 15px 30px -5px #16213E;
+  background-image: linear-gradient(144deg, #E94560, #533483 50%, #E94560);
+}
+
+.card2 {
+  background: #16213E;
+  border-radius: 17px;
+  width: 100%;
+  height: 100%;
+  /* we gave padding to container div because of this 
+  we will see the linear gradient*/
+  cursor: pointer;
+}

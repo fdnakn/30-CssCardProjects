@@ -1,0 +1,56 @@
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: #212831;
+}
+.card {
+  width: 190px;
+  height: 254px;
+  padding: 5px;
+  border-radius: 16px;
+  background: linear-gradient(to left, #f7ba2b 0%, #ea5358 100%);
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+}
+/* we will give after pseudo selector for blury background */
+.card::after {
+  position: absolute;
+  content: "";
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to left, #f7ba2b 0%, #ea5358 100%);
+  filter: blur(25px);
+  top: 30px;
+  transition: .3s;
+}
+/* now we will style the our card-info - front side the our card */
+.card-info {
+  background: #181818;
+  color: #181818;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+}
+/* we will give little styling to the text */
+ .card .title {
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+/* and when the hover works , after pseudo selctor's opacity will be 0 */
+.card:hover::after {
+  opacity: 0;
+}
+ /* and when the hover work color will change */
+.card:hover .card-info {
+  color: #f7ba2b;
+}   
