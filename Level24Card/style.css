@@ -1,0 +1,63 @@
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: rebeccapurple;
+}
+.box{
+    position: relative;
+    width: 250px;
+    height: 300px;
+    background: #fff;
+    padding: 25px;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.1);
+}
+.box:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ff226d;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: .3s;
+}
+.box:hover:before{
+    transform: scaleY(1);
+    transition: .3s;
+}
+.box h2{
+    /* we need to give position if we dont give
+    text wont shown */
+    position: relative;
+    letter-spacing: 1px;
+    font-size: 30px;
+}
+.box h3{
+    position: relative;
+    font-size: 20px;
+}
+.box p{
+    position: relative;
+    font-size: 15px;
+}
+.box button{
+    position: relative;
+    padding: 10px 50px;
+    letter-spacing: 1px;
+    border: none;
+    background-color: #00adb5;
+    border-radius: 4px;
+    transition: .3s;
+    cursor: pointer;
+}
+.box button:hover{
+    transform: scale(1.02);
+    color: white;
+    font-size: 18px;
+}

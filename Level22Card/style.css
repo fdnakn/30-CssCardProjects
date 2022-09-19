@@ -1,0 +1,63 @@
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: #e8e8e8;
+}
+.box{
+    position: relative;
+    width: 300px;
+    height: 400px;
+    background:#000;
+    box-shadow: 0 30px 30px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+.box .imgBox{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.box:hover .imgBox img{
+    opacity: 0;
+    /* when you put img you should give opacity 0
+    */
+}
+.box .content{
+    position: absolute;
+    bottom: 20px;
+    left: 10%;
+    width: 80%;
+    height: 60px;
+    background: #fff;
+    transition: .3s;
+    overflow: hidden;
+    padding: 15px;
+    box-sizing: border-box;
+}
+.box:hover .content{
+    height: 100%;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+}
+.box .content h4{
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+}
+.box .content p{
+    padding: 0;
+    opacity: 0;
+    line-height: 25px;
+    transition: .5s;
+    text-align: justify;
+}
+.box:hover .content p{
+    opacity: 1;
+    transition-delay: .1s;
+}
